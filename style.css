@@ -117,6 +117,6 @@ body {
 
 @media (hover: hover) and (pointer: fine) {
   body {
-    cursor: progress;
+    cursor: url('images/circle-cursor-24px.png') 16 16, auto;
   }
 }
