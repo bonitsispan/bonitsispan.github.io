@@ -152,3 +152,22 @@ body {
 .content a:hover {
   text-decoration: underline;
 }
+
+.icon-circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 5px solid #800000;
+  box-shadow: 0 0 20px #80000080;
+  background-color: #800000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.icon-circle img {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+}
