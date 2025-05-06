@@ -161,21 +161,6 @@ body {
   text-decoration: underline;
 }
 
-/* Icon circle on contact page */
-.icon-circle {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 5px solid #800000;
-  box-shadow: 0 0 20px #80000080;
-  background-color: #800000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px auto;
-  overflow: hidden;
-}
-
 .icon-circle img {
   width: 160px;
   height: 160px;
