@@ -24,7 +24,7 @@ body {
   transition: transform 0.1s ease;
 }
 
-/* Avatar */
+/* Avatar image (desktop & mobile) */
 .avatar img {
   width: 250px;
   height: 250px;
@@ -32,7 +32,7 @@ body {
   border: 5px solid #800000;
   box-shadow: 0 0 20px #80000080;
   object-fit: cover;
-  transform: translateY(25px); /* ✅ μετακίνηση προς τα κάτω */
+  object-position: center 30%; /* ✅ Μετακίνηση εστίασης προς τα κάτω */
 }
 
 /* Content */
@@ -57,7 +57,7 @@ body {
   line-height: 1.6;
 }
 
-/* Responsive */
+/* Responsive styles */
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
@@ -68,6 +68,7 @@ body {
   .avatar img {
     width: 180px;
     height: 180px;
+    animation: float 3s ease-in-out infinite;
   }
 
   .content h1 {
@@ -77,29 +78,24 @@ body {
   .content p {
     font-size: 1.1em;
   }
+
+  .content {
+    animation: fadeIn 2s ease-in forwards;
+  }
 }
 
-/* Parallax smoothness for desktop */
+/* Parallax container */
 #parallax-container {
   transition: transform 0.4s ease;
 }
 
-/* Mobile float animation */
+/* Float animation (mobile) */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-30px); }
+  0%, 100% { transform: translateY(10px); }
+  50% { transform: translateY(-20px); }
 }
 
-.float {
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Mobile fade-in animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(120px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-.fade-in {
-  animation: fadeIn 2s ease-in forwards;
 }
