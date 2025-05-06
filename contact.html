@@ -14,6 +14,9 @@
 
   <div class="layout" id="parallax-container">
     <div class="content">
+      <div class="icon-circle">
+        <img src="images/email-icon.png" alt="Email Icon" />
+      </div>
       <h1 class="highlight-maroon">Contact</h1>
       <p>Based in Larissa, Greece</p>
       <p>Email: <a href="mailto:bonitsispantelis@gmail.com">bonitsispantelis@gmail.com</a></p>
@@ -41,6 +44,7 @@
 
       animate();
     } else {
+      document.querySelector('.icon-circle')?.classList.add('float');
       document.querySelector('.content')?.classList.add('fade-in');
     }
   </script>
