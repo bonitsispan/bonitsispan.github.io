@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Pantelis Bonitsis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-buttons">
+    <a href="index.html" class="nav-button">Welcome Page</a>
+    <a href="contact.html" class="nav-button">Contact</a>
+  </div>
+
+  <div class="layout" id="parallax-container">
+    <div class="content">
+      <h1 class="highlight-maroon">Contact</h1>
+      <p>Based in Larissa, Greece</p>
+      <p>Email: <a href="mailto:bonitsispantelis@gmail.com">bonitsispantelis@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/pantelisbonitsis" target="_blank">linkedin.com/in/pantelisbonitsis</a></p>
+    </div>
+  </div>
+
+  <script>
+    const isMobile = window.matchMedia("(pointer: coarse)").matches;
+
+    if (!isMobile) {
+      const container = document.getElementById("parallax-container");
+      let mouseX = 0;
+      let mouseY = 0;
+
+      document.addEventListener("mousemove", (e) => {
+        mouseX = (e.clientX / window.innerWidth - 0.5) * 60;
+        mouseY = (e.clientY / window.innerHeight - 0.5) * 60;
+      });
+
+      function animate() {
+        container.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    } else {
+      document.querySelector('.content')?.classList.add('fade-in');
+    }
+  </script>
+</body>
+</html>
