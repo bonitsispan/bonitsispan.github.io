@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pantelis Bonitsis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout" id="parallax-container">
+    <div class="avatar">
+      <img src="images/profile.jpg" alt="Pantelis Bonitsis" />
+    </div>
+    <div class="content">
+      <h1>Hello!! I'm <span>Pantelis Bonitsis</span></h1>
+      <p>
+        A curious Computer Engineer with interests in <strong>robotics</strong> and <strong>AI/machine learning</strong>,
+        but also in software development and data science.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const isMobile = window.matchMedia("(pointer: coarse)").matches;
+
+    if (!isMobile) {
+      // Desktop: enable parallax
+      document.addEventListener("mousemove", (e) => {
+        const container = document.getElementById("parallax-container");
+        const x = (e.clientX / window.innerWidth - 0.5) * 30;
+        const y = (e.clientY / window.innerHeight - 0.5) * 30;
+        container.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    } else {
+      // Mobile: apply mobile-specific animation
+      document.querySelector('.avatar img').classList.add('float');
+      document.querySelector('.content').classList.add('fade-in');
+    }
+  </script>
+</body>
+</html>
