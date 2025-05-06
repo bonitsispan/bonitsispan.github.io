@@ -105,11 +105,6 @@ body {
   font-weight: bold;
 }
 
-.highlight-maroon {
-  color: #800000;
-  font-weight: bold;
-}
-
 .bold-white {
   color: #ffffff;
   font-weight: bold;
@@ -119,4 +114,41 @@ body {
   body {
     cursor: url('images/circle-cursor-24px.png') 16 16, auto;
   }
+}
+
+.top-buttons {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.nav-button {
+  background-color: transparent;
+  color: #800000;
+  border: 2px solid #800000;
+  padding: 6px 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #800000;
+  color: #ffffff;
+}
+
+.content a {
+  color: #800000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.content a:hover {
+  text-decoration: underline;
 }
