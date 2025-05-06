@@ -24,7 +24,7 @@ body {
   transition: transform 0.1s ease;
 }
 
-/* Avatar image (desktop & mobile) */
+/* Avatar image */
 .avatar img {
   width: 250px;
   height: 250px;
@@ -32,7 +32,7 @@ body {
   border: 5px solid #800000;
   box-shadow: 0 0 20px #80000080;
   object-fit: cover;
-  object-position: center 30%; /* ✅ Μετακίνηση εστίασης προς τα κάτω */
+  object-position: center 30%;
 }
 
 /* Content */
@@ -82,6 +82,10 @@ body {
   .content {
     animation: fadeIn 2s ease-in forwards;
   }
+
+  .icon-circle {
+    animation: float 3s ease-in-out infinite;
+  }
 }
 
 /* Parallax container */
@@ -89,7 +93,7 @@ body {
   transition: transform 0.1s ease-out;
 }
 
-/* Float animation (mobile) */
+/* Animations */
 @keyframes float {
   0%, 100% { transform: translateY(10px); }
   50% { transform: translateY(-20px); }
@@ -100,6 +104,7 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Highlights */
 .highlight-maroon {
   color: #800000;
   font-weight: bold;
@@ -110,12 +115,14 @@ body {
   font-weight: bold;
 }
 
+/* Cursor */
 @media (hover: hover) and (pointer: fine) {
   body {
     cursor: url('images/circle-cursor-24px.png') 16 16, auto;
   }
 }
 
+/* Navigation buttons */
 .top-buttons {
   position: fixed;
   top: 20px;
@@ -143,6 +150,7 @@ body {
   color: #ffffff;
 }
 
+/* Link styling */
 .content a {
   color: #800000;
   font-weight: bold;
@@ -153,6 +161,7 @@ body {
   text-decoration: underline;
 }
 
+/* Icon circle on contact page */
 .icon-circle {
   width: 250px;
   height: 250px;
@@ -164,10 +173,11 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px auto;
+  overflow: hidden;
 }
 
 .icon-circle img {
-  width: 280px;
-  height: 280px;
+  width: 160px;
+  height: 160px;
   object-fit: contain;
 }
