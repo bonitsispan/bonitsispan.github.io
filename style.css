@@ -247,8 +247,9 @@ body {
   }
 
   .bottom-row .nav-button {
-    flex: 1 1 33.33%;
-    max-width: 33.33%;
+    flex: calc(30% - 4px);
+    max-width: calc(30% - 4px);
+    min-width: 90px;
   }
 
   .nav-button {
