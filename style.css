@@ -76,7 +76,7 @@ body {
   transition: transform 0.1s ease-out;
 }
 
-/* Float animation (mobile) */
+/* Animations */
 @keyframes float {
   0%, 100% { transform: translateY(10px); }
   50% { transform: translateY(-20px); }
@@ -105,19 +105,26 @@ body {
   }
 }
 
-/* Navigation buttons */
+/* Navigation Buttons */
 .top-buttons {
   position: fixed;
   top: 20px;
   left: 20px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 40px;
   z-index: 1000;
 }
 
+.left-buttons,
+.right-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .nav-button {
+  min-width: 130px;
   background-color: transparent;
   color: #800000;
   border: 2px solid #800000;
@@ -128,11 +135,32 @@ body {
   text-align: center;
   transition: all 0.3s ease;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .nav-button:hover {
   background-color: #800000;
   color: #ffffff;
+}
+
+.nav-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: skewX(-30deg);
+  animation: lightSweep 3s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes lightSweep {
+  0%, 100% { left: -75%; }
+  50% { left: 100%; }
 }
 
 /* Links */
@@ -147,7 +175,6 @@ body {
 }
 
 /* Book/Email icon circle */
-
 .icon-circle img {
   width: 160px;
   height: 160px;
@@ -193,26 +220,18 @@ body {
   }
 }
 
-.nav-button {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
+.top-row,
+.bottom-row {
+  display: flex;
+  gap: 10px;
 }
 
-.nav-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 150%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transform: skewX(-30deg);
-  animation: lightSweep 3s ease-in-out infinite alternate;
-  z-index: -1;
-}
-
-@keyframes lightSweep {
-  0%, 100% { left: -75%; }
-  50% { left: 100%; }
+.top-buttons {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
 }
