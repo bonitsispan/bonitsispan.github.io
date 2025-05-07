@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education - Pantelis Bonitsis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-buttons">
+    <a href="index.html" class="nav-button">Welcome Page</a>
+    <a href="contact.html" class="nav-button">Contact</a>
+    <a href="education.html" class="nav-button">Education</a>
+  </div>
+
+  <div class="layout" id="parallax-container">
+    <div class="content">
+      <div class="icon-circle">
+        <img src="images/book-icon.png" alt="Book Icon" />
+      </div>
+      <h1 class="highlight-maroon">Education</h1>
+      <p><strong><span class="highlight-maroon">M.Sc.</span> in Computer Science and Engineering</strong></p>
+      <p><strong>( <span class="highlight-maroon">Under-graduate student</span> )</strong></p>
+      <p><strong><em>University of <span class="highlight-maroon">Ioannina</span></em></p>
+      <ul>
+        <li><span class="highlight-maroon">Current GPA</span> : 7.6 / 10</li>
+        <li><span class="highlight-maroon">Expected month of graduation</span> : June – September 2025</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const isMobile = window.matchMedia("(pointer: coarse)").matches;
+
+    if (!isMobile) {
+      const container = document.getElementById("parallax-container");
+      let mouseX = 0;
+      let mouseY = 0;
+
+      document.addEventListener("mousemove", (e) => {
+        mouseX = (e.clientX / window.innerWidth - 0.5) * 60;
+        mouseY = (e.clientY / window.innerHeight - 0.5) * 60;
+      });
+
+      function animate() {
+        container.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    } else {
+      document.querySelector('.icon-circle')?.classList.add('float');
+      document.querySelector('.content')?.classList.add('fade-in');
+    }
+  </script>
+</body>
+</html>
