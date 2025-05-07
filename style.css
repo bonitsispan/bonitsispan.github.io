@@ -194,12 +194,16 @@ body {
     flex-direction: column;
     padding: 20px;
     gap: 20px;
+
+    height: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   body {
   overflow: auto;
   height: auto;
-  } 
+  }
 
   .avatar img {
     width: 180px;
