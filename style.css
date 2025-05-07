@@ -26,6 +26,7 @@ body {
   transition: transform 0.1s ease;
 }
 
+/* Avatar image */
 .avatar img {
   width: 250px;
   height: 250px;
@@ -103,7 +104,7 @@ body {
   }
 }
 
-/* Navigation Buttons */
+/* Navigation Buttons Container */
 .top-buttons {
   position: fixed;
   top: 20px;
@@ -116,14 +117,18 @@ body {
 
 .top-row {
   display: flex;
-  gap: 10px;
+  flex-direction: row;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .bottom-row {
   display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
+/* Button Style */
 .nav-button {
   min-width: 130px;
   background-color: transparent;
@@ -146,6 +151,7 @@ body {
   color: #ffffff;
 }
 
+/* Moving Light Effect */
 .nav-button::before {
   content: '';
   position: absolute;
@@ -175,14 +181,14 @@ body {
   text-decoration: underline;
 }
 
-/* Icon Circle */
+/* Icon circle */
 .icon-circle img {
   width: 160px;
   height: 160px;
   object-fit: contain;
 }
 
-/* Mobile */
+/* Responsive layout */
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
@@ -204,6 +210,7 @@ body {
   .content ul {
     font-size: 1.1em;
     padding: 0 10px;
+    word-break: keep-all;
   }
 
   .content {
@@ -214,21 +221,23 @@ body {
     animation: float 3s ease-in-out infinite;
   }
 
-  .top-buttons {
-    left: 10px;
-    top: 10px;
-  }
-
-  .top-row {
-    flex-direction: column;
-  }
-
+  .top-row,
   .bottom-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .top-buttons {
     flex-direction: column;
+    gap: 10px;
+    top: 10px;
+    left: 10px;
   }
 
   .nav-button {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     font-size: 1em;
   }
 }
