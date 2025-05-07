@@ -57,7 +57,16 @@ body {
   line-height: 1.6;
 }
 
-/* Responsive styles */
+.content ul {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 1.2em;
+  color: #ddd;
+  list-style-type: disc;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
@@ -75,7 +84,8 @@ body {
     font-size: 2em;
   }
 
-  .content p {
+  .content p,
+  .content ul {
     font-size: 1.1em;
   }
 
@@ -150,7 +160,7 @@ body {
   color: #ffffff;
 }
 
-/* Link styling */
+/* Links */
 .content a {
   color: #800000;
   font-weight: bold;
