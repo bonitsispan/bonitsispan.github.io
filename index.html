@@ -29,12 +29,10 @@
 
   <script>
     const isMobile = window.matchMedia("(pointer: coarse)").matches;
+    const container = document.getElementById("parallax-container");
+    let mouseX = 0, mouseY = 0;
 
     if (!isMobile) {
-      const container = document.getElementById("parallax-container");
-      let mouseX = 0;
-      let mouseY = 0;
-
       document.addEventListener("mousemove", (e) => {
         mouseX = (e.clientX / window.innerWidth - 0.5) * 60;
         mouseY = (e.clientY / window.innerHeight - 0.5) * 60;
