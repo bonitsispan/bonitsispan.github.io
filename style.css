@@ -226,7 +226,7 @@ body {
     gap: 10px;
     top: 10px;
     left: 10px;
-    width: calc(100% - 20px);
+    width: calc(70% - 20px);
   }
 
   .top-row {
