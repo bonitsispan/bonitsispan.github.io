@@ -299,3 +299,39 @@ ul li::before {
   color: #ddd;
   margin-bottom: 10px;
 }
+
+.scattered-hobbies {
+  position: relative;
+  height: 400px; /* ή όσο ύψος θέλεις */
+}
+
+.hobby {
+  position: absolute;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.hiking {
+  top: 10%;
+  left: 15%;
+  color: #8B0000;
+}
+
+.basketball {
+  top: 25%;
+  left: 60%;
+  color: #800000;
+}
+
+.beer {
+  top: 60%;
+  left: 20%;
+  color: #a52a2a;
+}
+
+.whiskey {
+  top: 75%;
+  left: 65%;
+  color: #b22222;
+}
