@@ -233,12 +233,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 5px;
+    gap: 4px;
   }
 
   .top-row .nav-button {
-    flex: 1 1 calc(30%);
-    max-width: calc(30%);
+    flex: 1 1 calc(28%);
+    max-width: calc(28%);
   }
 
   .bottom-row {
