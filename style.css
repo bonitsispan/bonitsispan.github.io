@@ -223,29 +223,25 @@ body {
 
   .top-buttons {
     flex-direction: column;
+    gap: 10px;
     top: 10px;
     left: 10px;
     width: calc(100% - 20px);
   }
 
   .top-row {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 10px;
-  }
-
-  .bottom-row {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    margin-top: 10px;
+    justify-content: space-between;
   }
 
   .top-row .nav-button {
     flex: 1 1 calc(33.33% - 10px);
     max-width: calc(33.33% - 10px);
     font-size: 0.95em;
+  }
+
+  .bottom-row {
+    justify-content: flex-start;
   }
 
   .bottom-row .nav-button {
