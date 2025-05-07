@@ -239,7 +239,7 @@ body {
   .top-row .nav-button {
     flex: calc(30% - 4px);
     max-width: calc(30% - 4px);
-    min-width: 90px;
+    min-width: 110px;
   }
 
   .bottom-row {
