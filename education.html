@@ -8,15 +8,15 @@
 </head>
 <body>
   <div class="top-buttons">
-  <div class="top-row">
-    <a href="index.html" class="nav-button">Welcome Page</a>
-    <a href="contact.html" class="nav-button">Contact</a>
-    <a href="education.html" class="nav-button">Education</a>
+    <div class="top-row">
+      <a href="index.html" class="nav-button">Welcome Page</a>
+      <a href="contact.html" class="nav-button">Contact</a>
+      <a href="education.html" class="nav-button">Education</a>
+    </div>
+    <div class="bottom-row">
+      <a href="experience.html" class="nav-button">Experience</a>
+    </div>
   </div>
-  <div class="bottom-row">
-    <a href="experience.html" class="nav-button">Experience</a>
-  </div>
-</div>
 
   <div class="layout" id="parallax-container">
     <div class="content">
@@ -33,7 +33,7 @@
       <ul>
         <li><strong>Current GPA :</strong> <span class="highlight-maroon">7.6 / 10</span></li>
         <li><strong>Expected month of graduation :</strong>
-          <span class="highlight-maroon">June&nbsp;–&nbsp;September&nbsp;2025&nbsp;🙏🏻🙏🏻</span>
+          <span class="highlight-maroon">June – September 2025 🙏🏻🙏🏻</span>
         </li>
       </ul>
     </div>
@@ -41,12 +41,10 @@
 
   <script>
     const isMobile = window.matchMedia("(pointer: coarse)").matches;
+    const container = document.getElementById("parallax-container");
+    let mouseX = 0, mouseY = 0;
 
     if (!isMobile) {
-      const container = document.getElementById("parallax-container");
-      let mouseX = 0;
-      let mouseY = 0;
-
       document.addEventListener("mousemove", (e) => {
         mouseX = (e.clientX / window.innerWidth - 0.5) * 60;
         mouseY = (e.clientY / window.innerHeight - 0.5) * 60;
