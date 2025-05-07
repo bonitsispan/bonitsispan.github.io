@@ -192,3 +192,27 @@ body {
     padding: 5px 10px;
   }
 }
+
+.nav-button {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.nav-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: skewX(-30deg);
+  animation: lightSweep 3s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes lightSweep {
+  0%, 100% { left: -75%; }
+  50% { left: 100%; }
+}
