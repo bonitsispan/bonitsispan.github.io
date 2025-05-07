@@ -26,7 +26,6 @@ body {
   transition: transform 0.1s ease;
 }
 
-/* Avatar image */
 .avatar img {
   width: 250px;
   height: 250px;
@@ -104,7 +103,7 @@ body {
   }
 }
 
-/* Navigation Buttons Container */
+/* Navigation Buttons */
 .top-buttons {
   position: fixed;
   top: 20px;
@@ -115,14 +114,16 @@ body {
   z-index: 1000;
 }
 
-.top-row,
-.bottom-row {
+.top-row {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-/* Button Style */
+.bottom-row {
+  display: flex;
+}
+
 .nav-button {
   min-width: 130px;
   background-color: transparent;
@@ -145,7 +146,6 @@ body {
   color: #ffffff;
 }
 
-/* Moving Light Effect */
 .nav-button::before {
   content: '';
   position: absolute;
@@ -175,14 +175,14 @@ body {
   text-decoration: underline;
 }
 
-/* Icon circle */
+/* Icon Circle */
 .icon-circle img {
   width: 160px;
   height: 160px;
   object-fit: contain;
 }
 
-/* Responsive layout */
+/* Mobile */
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
@@ -204,7 +204,6 @@ body {
   .content ul {
     font-size: 1.1em;
     padding: 0 10px;
-    word-break: keep-all;
   }
 
   .content {
@@ -218,13 +217,14 @@ body {
   .top-buttons {
     left: 10px;
     top: 10px;
-    gap: 10px;
   }
 
-  .top-row,
+  .top-row {
+    flex-direction: column;
+  }
+
   .bottom-row {
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .nav-button {
