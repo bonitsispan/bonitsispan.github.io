@@ -256,3 +256,18 @@ body {
     font-size: 0.70em;
   }
 }
+
+ul li {
+  list-style: none;
+  position: relative;
+  padding-left: 24px;
+}
+
+ul li::before {
+  content: "💥";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #800000;
+  font-size: 1.2em;
+}
