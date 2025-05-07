@@ -237,8 +237,8 @@ body {
   }
 
   .top-row .nav-button {
-    flex: 1 1 calc(28%);
-    max-width: calc(28%);
+    flex: 1 1 auto;
+    max-width: 33%;
   }
 
   .bottom-row {
