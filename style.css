@@ -237,8 +237,8 @@ body {
   }
 
   .top-row .nav-button {
-    flex: 1 1 calc(33.33% - 5px);
-    max-width: calc(33.33% - 5px);
+    flex: 1 1 calc(33.33% - 10px);
+    max-width: calc(33.33% - 10px);
   }
 
   .bottom-row {
@@ -251,6 +251,6 @@ body {
   }
 
   .nav-button {
-    font-size: 0.95em;
+    font-size: 0.9em;
   }
 }
