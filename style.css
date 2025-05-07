@@ -222,25 +222,34 @@ body {
   }
 
   .top-buttons {
+    flex-direction: column;
     top: 10px;
     left: 10px;
+    width: calc(100% - 20px);
   }
 
   .top-row {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 10px;
-    overflow-x: auto;
-    max-width: 100%;
   }
 
   .bottom-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
     margin-top: 10px;
   }
 
-  .nav-button {
+  .top-row .nav-button {
+    flex: 1 1 calc(33.33% - 10px);
+    max-width: calc(33.33% - 10px);
     font-size: 0.95em;
-    padding: 6px 10px;
-    white-space: nowrap;
+  }
+
+  .bottom-row .nav-button {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
