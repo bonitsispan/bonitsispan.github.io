@@ -58,7 +58,6 @@ body {
   font-size: 1.4em;
   color: #ddd;
   line-height: 1.6;
-  white-space: normal;
 }
 
 .content ul {
@@ -105,24 +104,25 @@ body {
   }
 }
 
-/* Navigation Buttons */
+/* Navigation Buttons Container */
 .top-buttons {
   position: fixed;
   top: 20px;
   left: 20px;
   display: flex;
-  flex-direction: row;
-  gap: 40px;
+  flex-direction: column;
+  gap: 10px;
   z-index: 1000;
 }
 
-.left-buttons,
-.right-buttons {
+.top-row,
+.bottom-row {
   display: flex;
-  flex-direction: column;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
+/* Button Style */
 .nav-button {
   min-width: 130px;
   background-color: transparent;
@@ -145,6 +145,7 @@ body {
   color: #ffffff;
 }
 
+/* Moving Light Effect */
 .nav-button::before {
   content: '';
   position: absolute;
@@ -174,14 +175,14 @@ body {
   text-decoration: underline;
 }
 
-/* Book/Email icon circle */
+/* Icon circle */
 .icon-circle img {
   width: 160px;
   height: 160px;
   object-fit: contain;
 }
 
-/* Mobile-specific styles */
+/* Responsive layout */
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
@@ -214,24 +215,20 @@ body {
     animation: float 3s ease-in-out infinite;
   }
 
-  .nav-button {
-    font-size: 0.9em;
-    padding: 5px 10px;
+  .top-buttons {
+    left: 10px;
+    top: 10px;
+    gap: 10px;
   }
-}
 
-.top-row,
-.bottom-row {
-  display: flex;
-  gap: 10px;
-}
+  .top-row,
+  .bottom-row {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 
-.top-buttons {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 1000;
+  .nav-button {
+    width: 100%;
+    font-size: 1em;
+  }
 }
