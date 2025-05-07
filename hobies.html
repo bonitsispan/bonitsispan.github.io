@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hobies - Pantelis Bonitsis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="hobies-page">
+  <div class="top-buttons">
+    <div class="top-row">
+      <a href="index.html" class="nav-button">About</a>
+      <a href="contact.html" class="nav-button">Contact</a>
+      <a href="education.html" class="nav-button">Education</a>
+    </div>
+    <div class="bottom-row">
+      <a href="experience.html" class="nav-button">Experience</a>
+      <a href="projects.html" class="nav-button">Projects</a>
+      <a href="hobies.html" class="nav-button">Hobies</a>
+    </div>
+  </div>
+
+  <div class="layout" id="parallax-container">
+    <div class="content">
+      <div class="icon-circle">
+        <img src="images/hobies-icon.png" alt="Hobies Icon" />
+      </div>
+      <h1 class="highlight-maroon">Hobies</h1>
+
+      <div class="scattered-hobbies">
+        <div class="hobby hiking">Hiking 🌳</div>
+        <div class="hobby basketball">Basketball 🏀</div>
+        <div class="hobby beer">Beer 🍺</div>
+        <div class="hobby whiskey">Whiskey 🥃</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const isMobile = window.matchMedia("(pointer: coarse)").matches;
+    const container = document.getElementById("parallax-container");
+    let mouseX = 0, mouseY = 0;
+
+    if (!isMobile) {
+      document.addEventListener("mousemove", (e) => {
+        mouseX = (e.clientX / window.innerWidth - 0.5) * 60;
+        mouseY = (e.clientY / window.innerHeight - 0.5) * 60;
+      });
+
+      function animate() {
+        container.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    } else {
+      document.querySelector('.icon-circle')?.classList.add('float');
+      document.querySelector('.content')?.classList.add('fade-in');
+    }
+  </script>
+</body>
+</html>
