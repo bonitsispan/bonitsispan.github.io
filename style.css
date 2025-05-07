@@ -230,22 +230,27 @@ body {
   }
 
   .top-row {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 10px;
   }
 
   .top-row .nav-button {
     flex: 1 1 calc(33.33% - 10px);
     max-width: calc(33.33% - 10px);
-    font-size: 0.95em;
   }
 
   .bottom-row {
-    justify-content: flex-start;
+    display: flex;
   }
 
   .bottom-row .nav-button {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+
+  .nav-button {
+    font-size: 0.95em;
   }
 }
