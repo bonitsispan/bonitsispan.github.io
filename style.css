@@ -233,7 +233,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 4px;
+    gap: 5px;
   }
 
   .top-row .nav-button {
