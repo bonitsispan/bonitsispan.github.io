@@ -226,14 +226,14 @@ body {
     gap: 10px;
     top: 10px;
     left: 10px;
-    width: calc(70% - 20px);
+    width: calc(100% - 20px);
   }
 
   .top-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 5px;
   }
 
   .top-row .nav-button {
