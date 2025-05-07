@@ -221,23 +221,26 @@ body {
     animation: float 3s ease-in-out infinite;
   }
 
-  .top-row,
-  .bottom-row {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-
   .top-buttons {
-    flex-direction: column;
-    gap: 10px;
     top: 10px;
     left: 10px;
   }
 
-  .nav-button {
-    width: auto;
+  .top-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: auto;
     max-width: 100%;
-    font-size: 1em;
+  }
+
+  .bottom-row {
+    margin-top: 10px;
+  }
+
+  .nav-button {
+    font-size: 0.95em;
+    padding: 6px 10px;
+    white-space: nowrap;
   }
 }
