@@ -226,7 +226,7 @@ body {
     gap: 10px;
     top: 10px;
     left: 10px;
-    right: 10px;
+    right: 10px; /* */
     width: calc(100% - 20px);
   }
 
@@ -238,8 +238,8 @@ body {
   }
 
   .top-row .nav-button {
-    flex: calc(32% - 4px);
-    max-width: calc(32% - 4px);
+    flex: calc(31.5% - 4px);
+    max-width: calc(31.5% - 4px);
     min-width: 90px;
   }
 
