@@ -195,6 +195,10 @@ body {
 
 /* Responsive layout */
 @media (max-width: 768px) {
+  body:not(#projects-page) .layout {
+    height: 100vh;
+  }
+
   .layout {
     flex-direction: column;
     padding: 20px;
