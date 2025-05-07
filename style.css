@@ -11,6 +11,8 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100vh;
   overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Layout */
@@ -39,6 +41,7 @@ body {
 .content {
   text-align: center;
   max-width: 700px;
+  white-space: normal;
 }
 
 .content h1 {
@@ -55,6 +58,7 @@ body {
   font-size: 1.4em;
   color: #ddd;
   line-height: 1.6;
+  white-space: normal;
 }
 
 .content ul {
@@ -67,43 +71,12 @@ body {
   margin-right: 20%;
 }
 
-@media (max-width: 768px) {
-  .layout {
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .avatar img {
-    width: 180px;
-    height: 180px;
-    animation: float 3s ease-in-out infinite;
-  }
-
-  .content h1 {
-    font-size: 2em;
-  }
-
-  .content p,
-  .content ul {
-    font-size: 1.1em;
-  }
-
-  .content {
-    animation: fadeIn 2s ease-in forwards;
-  }
-
-  .icon-circle {
-    animation: float 3s ease-in-out infinite;
-  }
-}
-
 /* Parallax container */
 #parallax-container {
   transition: transform 0.1s ease-out;
 }
 
-/* Animations */
+/* Float animation (mobile) */
 @keyframes float {
   0%, 100% { transform: translateY(10px); }
   50% { transform: translateY(-20px); }
@@ -139,6 +112,7 @@ body {
   left: 20px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
   z-index: 1000;
 }
@@ -153,6 +127,7 @@ body {
   text-decoration: none;
   text-align: center;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav-button:hover {
@@ -171,8 +146,49 @@ body {
   text-decoration: underline;
 }
 
+/* Book/Email icon circle */
+
 .icon-circle img {
   width: 160px;
   height: 160px;
   object-fit: contain;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .avatar img {
+    width: 180px;
+    height: 180px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .content h1 {
+    font-size: 2em;
+  }
+
+  .content p,
+  .content ul {
+    font-size: 1.1em;
+    padding: 0 10px;
+    word-break: keep-all;
+  }
+
+  .content {
+    animation: fadeIn 2s ease-in forwards;
+  }
+
+  .icon-circle {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .nav-button {
+    font-size: 0.9em;
+    padding: 5px 10px;
+  }
 }
