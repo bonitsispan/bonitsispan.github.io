@@ -4,6 +4,7 @@ To build the Docker image required for this project, navigate to the directory n
 
 ```bash
 docker image build -t my-vulcanexus:humble-desktop .
+```
 
 ## Running the Docker Container
 
@@ -16,3 +17,4 @@ docker run -it --rm --name vulcanexus-container --user vulcanexus_user \
   -e DISPLAY=$DISPLAY -e QT_X11_NO_MITSHM=1 \
   -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
   my-vulcanexus:humble-desktop
+```
